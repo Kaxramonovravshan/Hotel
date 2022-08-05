@@ -1,0 +1,75 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} {% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+   
+</head>
+<body>
+    <div class="navabr_sticky">
+        <div class="navbar-container">
+            <div class="bg-white">
+                <div class="m-0 bg-grey w-100">
+                    <div class="container">
+                        <a class="text-white mr-1 p-1" href="#">+998914017702</a>
+                        <a class="text-white p-1" href="#">Buxoro, Lyabi Hovuz</a>
+                    </div>
+                </div>
+                <div class="navbar py-2 py-sm-1 d-flex justify-content-between flex-wrap  align-items-center container">
+                    <div onclick="handleToggle()" class="bars-container  mr-sm-3 d-none"  >
+                        <div class='bars ' ></div>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <a class='logo d-flex justify-content-between align-items-center' href="{% url 'index' %}">
+                            <img class="w-sm-25 ml-sm-auto" src="{% static 'images/Logo-01.svg' %}" alt="" />
+                        </a> 
+                    </div>
+                    <div class="accaunt-navigator-container b-1 fs-20 fs-sm-16">
+                        <a href="#onas" class="mr-3 text-center mt-0 mb-2 text-dark-ocean"> О нас</a>
+                        <a href="#nashiuslugi" class="mr-3 text-center mt-0 mb-2 text-dark-ocean">Наши услуги</a>
+                        <a href="#karta" class="mr-3 text-center mt-0 mb-2 text-dark-ocean">Карта</a>
+                        <a href="#zabranirovatnomer" class="text-center mt-0 mb-2 text-dark-ocean">Забронировать номер</a>
+                    </div>
+                </div>
+            </div>
+            <div class = ' accaunt-navigator-hidden-container d-none '>
+                <div class = 'accaunt-navigator-hidden bg-white border-top-light border-right-light  ' >
+                    <div class='hidden-menu-header'>
+                        <div class="border-bottom-light flex-wrap d-flex justify-content-between align-items-center py-2 container">
+                            <a class='logo' href="">
+                                <img src="{% static 'images/Logo-01.svg' %}" alt="" />
+                            </a> 
+                            <i onclick="handleToggle()" class='fas fa-times'></i>
+                        </div>
+                            <div class="b-1 fs-35 fs-sm-20 mt-3 px-3 py-2">
+                                <div><a href="#onas" class="mr-3 text-center mt-0 mb-2 text-dark-ocean"> О нас</a></div>
+                                <div class="mt-2 mb-2"><a href="#nashiuslugi" class="mr-3 text-center mt-0 mb-2 text-dark-ocean">Наши услуги</a></div>
+                                <div class="mb-2"><a href="#karta" class="mr-3 text-center mt-0 mb-2 text-dark-ocean">Карта</a></div>
+                                <div><a href="#zabranirovatnomer" class="text-center mt-0 mb-2 text-dark-ocean">Забронировать номер</a></div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+       </div>
+    </div>
+
+   <!-- Main -->
+   <div class="">
+    {% block content %}
+        
+            
+    {% endblock %}
+    </div>
+
+    <script type="text/javascript" src="{% static 'js/script.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/index.js' %}"></script>
+    <script src="https://kit.fontawesome.com/92d93db707.js" crossorigin="anonymous"></script>
+
+</body>
+</html>
